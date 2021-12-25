@@ -3,6 +3,7 @@ package com.beyzaakkuzu.noteapp.feature_note.domain.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.beyzaakkuzu.noteapp.ui.theme.*
+import java.lang.Exception
 
 @Entity //veritabanındaki bir tabloyu temsil eder
 data class Note(val title: String, //columns
@@ -13,3 +14,5 @@ data class Note(val title: String, //columns
         val noteColors= listOf(RedOrange, LightGreen, RedPink, BabyBlue, Violet)
     }
 }
+
+class InvalidNoteException(message: String): Exception(message)
